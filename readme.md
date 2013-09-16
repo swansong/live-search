@@ -1,5 +1,7 @@
 ##live-search.js by Jon Swanson
 
+This is a free, Apache licensed script for use in any site for any purpose.
+
 This script provides live as-you-type search functionality on the current page.
 The every key press in the designated search box results in a search of the
 designated terms in the designated items, and the items fade in or out according
