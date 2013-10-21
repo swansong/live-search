@@ -22,9 +22,14 @@
 *   give the section a class of "searchable-container"						*
 ****************************************************************************/
 
-$(document).ready(function() {
+jQuery(document).ready(function($) {
 	$("#livesearch").keyup(function () {
 		executeSearch($(this).val().toLowerCase());
+	});
+	$("#livesearch").focus(function () {
+		if ($('#livesearch').val() == 'Search') {
+			$('#livesearch').val("");
+		}
 	});
 });
 
