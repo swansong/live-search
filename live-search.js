@@ -25,10 +25,13 @@
 jQuery(document).ready(function($) {
 	$("#livesearch").keyup(function () {
 		executeSearch($(this).val().toLowerCase());
-	});
-	$("#livesearch").focus(function () {
-		if ($('#livesearch').val() == 'Search') {
-			$('#livesearch').val("");
+	}).focus(function () {
+		if ($(this).val() == "Search") {
+			$(this).val("");
+		}
+	}).blur(function () {
+		if ($(this).val() == "") {
+			$(this).val("Search");
 		}
 	});
 });
