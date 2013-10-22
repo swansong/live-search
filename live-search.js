@@ -23,15 +23,16 @@
 ****************************************************************************/
 
 jQuery(document).ready(function($) {
+	var initial_text = $("#livesearch").val();
 	$("#livesearch").keyup(function () {
 		executeSearch($(this).val().toLowerCase());
 	}).focus(function () {
-		if ($(this).val() == "Search") {
+		if ($(this).val() == initial_text) {
 			$(this).val("");
 		}
 	}).blur(function () {
 		if ($(this).val() == "") {
-			$(this).val("Search");
+			$(this).val(initial_text);
 		}
 	});
 });
